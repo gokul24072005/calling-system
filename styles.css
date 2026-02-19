@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode class */
+body.dark {
+    background-color: #0b1120;
+    color: #e2e8f0;
+}
+body.dark .glass {
+    background: rgba(30, 41, 59, 0.85);
+    border-color: rgba(255,255,255,0.05);
+}
+body.dark .bg-slate-900 {
+    background-color: #0f172a;
+}
+body.dark .bg-slate-800 {
+    background-color: #1e293b;
+}
+body.dark .border-slate-800 {
+    border-color: #334155;
+}
+
+.login-bg {
+    background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.9)),
+                url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+}
+
+.glass {
+    background: rgba(15, 23, 42, 0.85);
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: background 0.3s;
+}
+
+.role-btn {
+    transition: all 0.3s ease;
+}
+
+.role-btn.active {
+    background: white;
+    color: #0f172a;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2);
+}
+
+.task-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.task-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+}
+
+.status-dot {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+/* Toast animations */
+#toast {
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+    transform: translateY(10px);
+}
+#toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
